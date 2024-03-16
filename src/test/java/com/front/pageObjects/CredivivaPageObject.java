@@ -1,4 +1,15 @@
 package com.front.pageObjects;
 
-public class CredivivaPageObject {
+import net.serenitybdd.core.pages.PageObject;
+
+public class CredivivaPageObject extends PageObject {
+
+    public void digitarEnElBuscadorLaPalabraCrediviva(String textoBuscar) {
+    }
+
+    public void irOpcionDeBlogDeLaPagina() {
+    }
+
+    public void validarQueLaPalabraBlogCredivivaEsteVisibileEnLaPaginaTomarUnaCapturaDePantalla() {
+    }
 }

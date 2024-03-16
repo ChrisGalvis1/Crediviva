@@ -38,5 +38,5 @@ public class RunnerFlujosCrediviva {
         glue = "com.front.definitions"
 )
 public class RunnerCrediviva {
-}
+    }
 }
