@@ -25,6 +25,7 @@ public class CredivivaSteps extends CredivivaPageObject {
     @Step
     public void digitarEnElBuscadorLaPalabraCrediviva(String textoBuscar) {
         credivivaPageObject.digitarEnElBuscadorLaPalabraCrediviva(textoBuscar);
+        credivivaPageObject.seleccionarLaOpcionBuscada();
     }
 
     @Step
