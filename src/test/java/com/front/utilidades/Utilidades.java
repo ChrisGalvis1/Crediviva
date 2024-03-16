@@ -25,6 +25,6 @@ public class Utilidades extends PageObject {
     public void takeScreenShot (WebDriver driver, String screenShotName){
         File screenShotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         Serenity.recordReportData().withTitle("ScreenShots").andContents(screenShotName);
-        screenShotFile.renameTo(new File("target/site/screenShots_passed", screenShotName));
+        screenShotFile.renameTo(new File("screenshots", screenShotName));
     }
 }
