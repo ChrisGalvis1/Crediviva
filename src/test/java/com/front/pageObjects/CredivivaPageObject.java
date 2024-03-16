@@ -1,6 +1,7 @@
 package com.front.pageObjects;
 
 import com.front.runners.RunnerFlujosCrediviva;
+import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.pages.PageObject;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -30,6 +31,7 @@ public class CredivivaPageObject extends PageObject {
         try {
             find(By.xpath(btnSeleccionarBusqueda)).click();
             waitFor(2).seconds();
+            Serenity.takeScreenshot();
         }catch (Exception e){
             LOGGER.error("Falló en el paso seleccionarLaOpcionBuscada: " + e.getMessage());
             Assert.assertTrue(false);
