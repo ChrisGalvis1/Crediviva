@@ -8,8 +8,11 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
-
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 public class Utilidades extends PageObject {
 
@@ -26,5 +29,12 @@ public class Utilidades extends PageObject {
         File screenShotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         Serenity.recordReportData().withTitle("ScreenShots").andContents(screenShotName);
         screenShotFile.renameTo(new File("screenshots", screenShotName));
+    }
+
+    public static String getCurrentDateTime() {
+        LocalDateTime currentDateTime = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss");
+        String formattedDateTime = currentDateTime.format(formatter);
+        return formattedDateTime;
     }
 }

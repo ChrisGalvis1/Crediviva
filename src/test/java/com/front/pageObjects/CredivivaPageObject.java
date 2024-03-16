@@ -14,7 +14,10 @@ import org.openqa.selenium.WebDriver;
 public class CredivivaPageObject extends PageObject {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RunnerFlujosCrediviva.class);
+
     Utilidades utilidades;
+    String dateTime = utilidades.getCurrentDateTime();
+
     //Objetos mapeados
     String txtBusquedaGoogle = "//form[@action='/search']//div[@class='RNNXgb']//div[@class='a4bIc']//textarea";
     String btnSeleccionarBusqueda = "//div[@role='main']//div[@id='search']//div[@class='BYM4Nd']//div[@class='eKjLze']//div[@aria-hidden='true']";
@@ -58,7 +61,7 @@ public class CredivivaPageObject extends PageObject {
             utilidades.bordearElemento(find(By.xpath(lblBlogCrediviva)));
             Assert.assertTrue(find(By.xpath(lblBlogCrediviva)).isDisplayed());
             waitFor(1).second();
-            utilidades.takeScreenShot(getDriver(), "screeShot_BlogCrediviva.png");
+            utilidades.takeScreenShot(getDriver(), "screeShot_BlogCrediviva__"+dateTime+"__.png");
         }catch (Exception e){
             LOGGER.error("Falló en el paso validarQueLaPalabraBlogCredivivaEsteVisibileEnLaPaginaTomarUnaCapturaDePantalla: " + e.getMessage());
             Assert.assertTrue(false);
