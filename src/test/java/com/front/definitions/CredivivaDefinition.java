@@ -1,2 +1,4 @@
-package com.front.definitions;public class credivivaDefinition {
+package com.front.definitions;
+
+public class CredivivaDefinition {
 }
